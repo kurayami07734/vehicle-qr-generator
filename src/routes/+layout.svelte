@@ -12,7 +12,7 @@
 	<ul class="nav-links">
 		<li>Generate</li>
 		<li>Scan</li>
-		<li><a href="/sign-in">Sign in</a></li>
+		<li><a href="/login">Sign in</a></li>
 	</ul>
 </nav>
 
