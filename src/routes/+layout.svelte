@@ -29,13 +29,16 @@
 
 <style>
 	nav {
-		margin: 1rem;
+		/* margin: 1rem; */
+		padding-left: 10px;
+		padding-right: 10px;
 		position: sticky;
 		position: -webkit-sticky;
 		z-index: 100;
 		top:0;
 		-webkit-backdrop-filter: blur(8px);
 		backdrop-filter: blur(8px);
+		box-shadow: 0px 1px;
 	}
 	img {
 		width: 30px;

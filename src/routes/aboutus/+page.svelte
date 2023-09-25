@@ -1,15 +1,124 @@
-<h1>About Us</h1>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ab earum odit numquam nobis eligendi ducimus sequi voluptatum aliquid, consequatur esse velit enim, qui eveniet a harum. Rerum, quisquam numquam.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iusto recusandae nihil. Est a inventore consectetur omnis impedit, sit illo corporis harum quasi, molestiae ratione minus, delectus hic fuga voluptatum.
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, at velit. Possimus, alias? Reprehenderit dolor ad doloribus fugiat, culpa dolores iure? Voluptas maxime blanditiis perferendis reiciendis aliquam, ab impedit provident.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia cumque dolorem aliquid, vero maxime, ipsa sit fugit magnam dignissimos dolorum eligendi reprehenderit quasi nihil suscipit. Aspernatur aut corrupti non incidunt.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed nemo inventore corporis sit magni maiores ratione fuga iste consectetur omnis tempore, possimus facere libero dolorem provident error quas praesentium?
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsam, vel cupiditate, odio, nesciunt quidem possimus assumenda delectus similique natus rem iusto dolores! Exercitationem, totam quae libero voluptas veniam commodi.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, quod quis iure mollitia officia deserunt, dolorem aspernatur natus ut laudantium exercitationem, dolorum vel pariatur. Tempora doloremque quo exercitationem explicabo praesentium.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis assumenda ad ab maxime nemo facere aliquid aperiam dolores a similique, amet necessitatibus ea odio rem accusamus illum ipsum? Fuga, ad.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ab dolor deleniti quos sit excepturi veritatis magni, odio voluptas dicta dolorum quam ea eveniet rem veniam officiis! Maxime, quo incidunt.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consectetur consequuntur inventore debitis voluptas, cum maiores et aspernatur. Ut nostrum nisi tenetur sequi aut architecto maiores asperiores officiis, enim sapiente.
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ex, mollitia voluptate labore obcaecati quaerat? Consequatur, dolorum vero? Id, ipsum obcaecati commodi repudiandae culpa natus asperiores inventore laboriosam ut veniam.
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, dolorum. Aut, nam odit! Hic fuga enim quia dolorum inventore dignissimos molestias dolore sapiente amet veritatis? Minima voluptas alias facere numquam.
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ratione excepturi eos labore quia sed earum? Fuga distinctio quidem ea dolorum magni, incidunt ex delectus, et ipsa maxime facere aspernatur?
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed dolor molestiae, atque impedit quas provident totam natus odit consectetur, accusamus magni consequatur nisi non inventore sequi praesentium incidunt ratione sit?
+<script>
+    import PersonCard from "../../components/personCard.svelte";
+</script>
+<div class="container">
+    Pythonista is a team of 3 students from <a href="https://www.instagram.com/nit_raipur/?hl=en">National Institute of Technology Raipur</a> who are pusruing Bachelor of Technology in the domain of <i>Electrical Engineering</i>.<br>
+    We have a keen interest in Software Development, Machine Learning and Data Science. Do reach out to us if you want to collaborate.
+    <div class="responsive-container-block container">
+        <p class="text-blk team-head-text">
+          Our Team
+        </p>
+        <div class="responsive-container-block">
+          <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+            <PersonCard name="Aditya Ghidora" position="Senior Year" description="NIT Raipur" inlink="https://www.linkedin.com/in/aditya-ghidora/" github="https://github.com/kurayami07734" image="https://avatars.githubusercontent.com/u/60501848?v=4"/>
+          </div>
+          <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+            <PersonCard name="Aditya Kumar Dubey" position="Senior Year" description="NIT Raipur" inlink="https://www.linkedin.com/in/adityush007/" github="https://github.com/adityush007" image="https://avatars.githubusercontent.com/u/79398033?v=4"/>
+          </div>
+          <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+            <PersonCard name="Saswat Meher" position="Senior Year" description="NIT Raipur" inlink="https://www.linkedin.com/in/saswat-meher-924886192/" github="https://github.com/Saswat290401" image="https://avatars.githubusercontent.com/u/83302277?v=4"/>
+        </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+    div{
+        text-align: justify;
+    }
+    * {
+        font-family: Nunito, sans-serif;
+    }
+
+    .responsive-cell-block {
+        min-height: 75px;
+    }
+
+    .responsive-container-block {
+        min-height: 75px;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+        justify-content: space-evenly;
+    }
+
+    .team-head-text {
+        font-size: 48px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .team-head-text {
+        line-height: 50px;
+        width: 100%;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+
+    .container {
+        max-width: 1380px;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-bottom: 60px;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        padding-left: 30px;
+    }
+
+    .card-container {
+        width: 280px;
+        margin-top: 0px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+    }
+
+
+    @media (max-width: 500px) {
+        .card-container {
+            width: 100%;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 25px;
+            margin-left: 0px;
+        }
+    }
+
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .wk-desk-3 {
+    width: 25%;
+    }
+
+    @media (max-width: 1024px) {
+        .wk-ipadp-3 {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .wk-tab-6 {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .wk-mobile-12 {
+            width: 100%;
+        }
+    }
+</style>
