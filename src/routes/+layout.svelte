@@ -35,7 +35,7 @@
 		position: sticky;
 		position: -webkit-sticky;
 		z-index: 100;
-		top:0;
+		top: 0;
 		-webkit-backdrop-filter: blur(8px);
 		backdrop-filter: blur(8px);
 		box-shadow: 0px 1px;

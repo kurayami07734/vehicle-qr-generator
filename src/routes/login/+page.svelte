@@ -2,7 +2,15 @@
 	import { firebaseAuth } from '$lib/firebase';
 	import { goto } from '$app/navigation';
 	import { authUser } from '$lib/authStore';
-	import { signInWithPopup, GoogleAuthProvider, signInWithPhoneNumber, RecaptchaVerifier, setPersistence, signInWithRedirect, inMemoryPersistence} from 'firebase/auth';
+	import {
+		signInWithPopup,
+		GoogleAuthProvider,
+		signInWithPhoneNumber,
+		RecaptchaVerifier,
+		setPersistence,
+		signInWithRedirect,
+		inMemoryPersistence
+	} from 'firebase/auth';
 	import Icon from '@iconify/svelte';
 
 	function loginWithGoogle() {
@@ -20,7 +28,7 @@
 			.catch((e) => {
 				console.log(e.toString());
 			});
-			
+
 		goto('/');
 	}
 </script>
@@ -29,6 +37,7 @@
 	<button on:click={() => loginWithGoogle()}>
 		<Icon icon="bi:google" style="font-size:2rem;" /> Continue with Google</button
 	>
-	<button id ="phone-sign-in">
-		<Icon icon="ic:baseline-phone" style="font-size:2rem;" /> Login with Phone & OTP</button>
+	<button id="phone-sign-in">
+		<Icon icon="ic:baseline-phone" style="font-size:2rem;" /> Login with Phone & OTP</button
+	>
 </div>
