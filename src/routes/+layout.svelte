@@ -29,9 +29,8 @@
 
 <style>
 	nav {
-		/* margin: 1rem; */
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		position: sticky;
 		position: -webkit-sticky;
 		z-index: 100;
