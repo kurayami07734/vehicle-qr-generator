@@ -1,10 +1,10 @@
-<script>
-    export let name;
-    export let description;
-    export let position;
-    export let inlink;
-    export let github;
-    export let image;
+<script lang="ts">
+    export let name:string;
+    export let description:string;
+    export let position:string;
+    export let inlink:string;
+    export let github:string;
+    export let image:string;
     import Icon from '@iconify/svelte';
 </script>
 <div class="card">
