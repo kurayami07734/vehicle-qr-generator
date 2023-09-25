@@ -11,6 +11,7 @@
 		</li>
 	</ul>
 	<ul class="nav-links">
+		<li><a href="/aboutus">About Us</a></li>
 		<li><a href="/scan">Scan</a></li>
 		{#if $authUser !== undefined}
 			<li>
@@ -29,6 +30,12 @@
 <style>
 	nav {
 		margin: 1rem;
+		position: sticky;
+		position: -webkit-sticky;
+		z-index: 100;
+		top:0;
+		-webkit-backdrop-filter: blur(8px);
+		backdrop-filter: blur(8px);
 	}
 	img {
 		width: 30px;
