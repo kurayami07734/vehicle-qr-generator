@@ -1,13 +1,14 @@
 <script>
 	import '@picocss/pico';
 	import '../app.css';
+	import logo from '$lib/assets/logo.png';
 	import { authUser } from '$lib/authStore';
 </script>
 
 <nav>
 	<ul>
 		<li>
-			<strong><a href="/"> Vehicle QR codes</a></strong>
+			<strong><a href="/"> <img class="logo" src={logo} alt="Logo" /></a></strong>
 		</li>
 	</ul>
 	<ul class="nav-links">
@@ -16,7 +17,7 @@
 		{#if $authUser !== undefined}
 			<li>
 				<a href="/me">
-					<img src={$authUser.photoURL} alt={`photo of ${$authUser.displayName}`} />
+					<img class="photo" src={$authUser.photoURL} alt={`photo of ${$authUser.displayName}`} />
 				</a>
 			</li>
 		{:else}
@@ -39,8 +40,11 @@
 		backdrop-filter: blur(8px);
 		box-shadow: 0px 1px;
 	}
+	.photo {
+		/* width: 30px; */
+		border-radius: 50px;
+	}
 	img {
-		width: 30px;
-		border-radius: 30px;
+		width: 50px;
 	}
 </style>

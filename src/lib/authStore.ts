@@ -7,4 +7,5 @@ interface AuthUser {
 }
 
 const authUser = writable<AuthUser | undefined>(undefined);
+
 export { authUser };

@@ -1,10 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { Html5QrcodeScanner } from 'html5-qrcode';
 	import { onMount } from 'svelte';
-	function onScanSuccess(decodedText, decodedResult) {
-		console.log(`Code matched = ${decodedText}`, decodedResult);
-	}
-
 	function onScanFailure(error) {
 		console.warn(`Code scan error = ${error}`);
 	}
@@ -14,7 +11,11 @@
 			{ fps: 10, qrbox: { width: 250, height: 250 } },
 			false
 		);
-		html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+		html5QrcodeScanner.render((text, result) => {
+			const link = text.split('/');
+			goto(`/qr/${link[2]}`);
+			// html5QrcodeScanner.clear();
+		}, onScanFailure);
 	});
 </script>
 

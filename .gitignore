@@ -4,6 +4,8 @@ node_modules
 /.svelte-kit
 /package
 .vercel
+**/venv
+firebase-debug.log
 .env
 .env.*
 !.env.example

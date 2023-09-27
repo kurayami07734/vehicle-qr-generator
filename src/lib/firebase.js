@@ -7,7 +7,8 @@ import {
 	PUBLIC_FIREBASE_APP_ID
 } from '$env/static/public';
 
-import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore/lite';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -19,9 +20,10 @@ const firebaseConfig = {
 	appId: PUBLIC_FIREBASE_APP_ID
 };
 
-let firebaseApp: FirebaseApp | undefined;
+let firebaseApp = undefined;
 if (!getApps().length) {
 	firebaseApp = initializeApp(firebaseConfig);
 }
 const firebaseAuth = getAuth(firebaseApp);
-export { firebaseApp, firebaseAuth };
+const db = getFirestore();
+export { firebaseApp, firebaseAuth, db };
